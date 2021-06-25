@@ -2,13 +2,22 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  env: {
+    email: process.env.EMAIL,
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'www-vincentrehm',
+    title: 'Vincent REHM, Entrepreneur, CTO et freelance web.',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          "Entrepreneur depuis 4 ans, je vous fais bénéficier de mon expérience pour optimiser l'efficience de vos activités métier grâce au numérique.",
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -36,6 +45,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    'nuxt-protected-mailto',
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -46,5 +56,11 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    html: {
+      minify: {
+        decodeEntities: false,
+      },
+    },
+  },
 }
