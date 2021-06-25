@@ -6,7 +6,7 @@
         <div class="lg:text-center flex flex-col justify-center">
           <!-- Photo & Name -->
           <div class="flex justify-center">
-            <img src="/vrehm-picture.webp" class="rounded-lg h-36" />
+            <img src="/vrehm-picture.webp" class="rounded-lg h-36 w-36" />
           </div>
           <p
             class="
